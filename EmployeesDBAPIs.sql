@@ -4,7 +4,7 @@ use EmployeesDBAPIs
 go
 Create table Department(
 	ID int identity(1,1) primary key,
-	DepartmentName varchar(500),
+	 varchar(500),
 )
 go
 insert into Department values
@@ -31,4 +31,6 @@ Department = '" + + @"',
 where ID = '" + + @"',
 
 
-alter table Employee add DateOfJoining datetime 
+alter table dbo.Employee alter column DateOfJoining datetime 
+
+select * from Employee
