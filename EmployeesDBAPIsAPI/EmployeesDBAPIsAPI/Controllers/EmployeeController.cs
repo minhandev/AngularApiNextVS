@@ -127,11 +127,11 @@ namespace EmployeesDBAPIsAPI.Controllers
                 {
                     posFile.CopyTo(stream);
                 }
-                return new JsonResult(fileName);
+                return new JsonResult("Them hinh anh "+ fileName + " thanh cong !");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return new JsonResult("___.png");
+                return new JsonResult(e.Message);
             }
         }
 
